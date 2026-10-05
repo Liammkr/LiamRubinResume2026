@@ -2,5 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Liam Rubin</title>
   </head>
+  <style></style>
+  <body>
+    <script>
+      (function () {
+        var root = document.documentElement;
+
+        // theme: manual choice wins over the OS preference, in both directions
+        var saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch (e) {}
+        if (saved) {
+          root.setAttribute("data-theme", saved);
+        }
+        document.getElementById("theme").addEventListener("click", function () {
+          var dark = matchMedia("(prefers-color-scheme: dark)").matches;
+          var cur =
+            root.getAttribute("data-theme") || (dark ? "dark" : "light");
+          var next = cur === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch (e) {}
+        });
+      })();
+    </script>
+  </body>
 </html>
