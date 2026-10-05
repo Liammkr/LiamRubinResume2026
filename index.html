@@ -34,7 +34,7 @@
             <a class="navOption" href="#activities">Activities</a>
           </nav>
           <div style="display: flex; align-items: center; gap: 8px">
-            <button class="themeButton">Theme</button>
+            <button id="theme" class="themeButton">Theme</button>
             <button class="downloadButton">Download PDF</button>
           </div>
         </div>
@@ -64,5 +64,93 @@
         });
       })();
     </script>
+    <main>
+      <section
+        style="padding-block: clamp(40px, 7vw, 88px) clamp(40px, 6vw, 72px)"
+      >
+        <div
+          style="
+            max-width: 75%;
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 50px 65px;
+            align-items: end;
+          "
+        >
+          <div>
+            <h1
+              style="
+                margin: 0;
+                font-weight: 600;
+                line-height: 1;
+                color: #e6e8ea;
+              "
+            >
+              Liam Rubin
+            </h1>
+            <p
+              style="
+                margin: 0;
+                margin-top: 25px;
+                max-width: 65ch;
+                line-height: 1.5;
+                color: rgb(139, 146, 159);
+              "
+            >
+              Builds and ships web products end to end, from the data pipeline
+              behind a product to the paid subscription flow in front of it.
+              Built
+              <a href="#liamkr" class="projectLinks">liamkr.com</a>, a site for
+              sport-specific player projections and the chances of achieving a
+              specific stat line;
+              <a href="#statkeeper" class="projectLinks">StatKeeper</a>, a live
+              stat tracker for high school, amateur, and youth basketball; and a
+              free,
+              <a href="#crypto" class="projectLinks"
+                >open-source crypto payment processor</a
+              >. Applying to product because the calls worth making are what to
+              build, who it is for, and how it gets paid for.
+            </p>
+          </div>
+          <div
+            style="display: grid; gap: 22px; justify-items: start; min-width: 0"
+          >
+            <dl
+              style="
+                display: grid;
+                gap: 10px;
+                font-size: 0.9375rem;
+                min-width: 0;
+                margin: 0;
+              "
+            >
+              <div class="infoTextWrap">
+                <dt class="infoTextLead">Email</dt>
+                <dd class="infoText">
+                  <a
+                    href="mailto:liamkrubin@gmail.com"
+                    class="infoTextImportant"
+                    >liamkrubin@gmail.com</a
+                  >
+                </dd>
+              </div>
+              <div class="infoTextWrap">
+                <dt class="infoTextLead">Phone</dt>
+                <dd class="infoText">
+                  <a href="tel:+14244365572" class="infoTextImportant"
+                    >(424) 436-5572</a
+                  >
+                </dd>
+              </div>
+              <div class="infoTextWrap">
+                <dt class="infoTextLead">Based</dt>
+                <dd class="infoText">Santa Monica, CA</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

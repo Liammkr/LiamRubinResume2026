@@ -2,7 +2,6 @@ body {
   background-color: #0f1113;
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
 }
-
 /*
 Nav
 */
@@ -61,7 +60,7 @@ Nav
   border-color: rgb(37, 42, 51);
 }
 .downloadButton:hover {
-  border-color: #e1e4e9;
+  border-color: rgb(139, 146, 159);
 }
 .themeButton {
   display: inline-flex;
@@ -86,5 +85,47 @@ Nav
   border-color: rgb(37, 42, 51);
 }
 .themeButton:hover {
-  border-color: #e1e4e9;
+  border-color: rgb(139, 146, 159);
+}
+/*
+C1
+*/
+.infoText {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #e6e8ea;
+}
+.projectLinks {
+  color: #e6e8ea;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: rgb(79, 81, 85);
+}
+.projectLinks:hover {
+  text-decoration: underline;
+  text-decoration-color: #93a5ff;
+}
+
+.infoTextLead {
+  color: rgb(139, 146, 159);
+  width: 52px;
+  flex: none;
+}
+.infoTextWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.infoTextImportant {
+  color: #e6e8ea;
+  text-decoration: none;
+}
+.infoTextImportant:hover {
+  color: #93a5ff;
+}
+.infoText:hover {
+  color: #93a5ff;
 }
