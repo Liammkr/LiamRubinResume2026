@@ -7,9 +7,39 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <title>Liam Rubin</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <style></style>
   <body>
+    <header class="navBar" id="navBar">
+      <div class="wrapper">
+        <a
+          class="navOption"
+          style="font-weight: 600; color: #e6e8ea"
+          href="#top"
+          >Liam Rubin</a
+        >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-right: 10px;
+          "
+        >
+          <nav class="nav" aria-label="Sections">
+            <a class="navOption" href="#projects">Projects</a>
+            <a class="navOption" href="#education">Education</a>
+            <a class="navOption" href="#skills">Skills</a>
+            <a class="navOption" href="#activities">Activities</a>
+          </nav>
+          <div style="display: flex; align-items: center; gap: 8px">
+            <button class="themeButton">Theme</button>
+            <button class="downloadButton">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </header>
     <script>
       (function () {
         var root = document.documentElement;
