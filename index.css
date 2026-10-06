@@ -2,13 +2,32 @@ body {
   background-color: #0f1113;
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
 }
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+:root {
+  --whiteText: #e6e8ea;
+  --whiteOutline: #e1e4e9;
+  --background: #0f1113;
+  --greyText: rgb(139, 146, 159);
+  --offGrey: rgb(79, 81, 85);
+
+  --grey1: #0f1218;
+  --grey2: #434b58;
+}
 /*
 Nav
 */
 .navBar {
   position: sticky;
-  background-color: #0f1113;
-  color: #e6e8ea;
+  background-color: var(--background);
+  color: var(--whiteText);
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 .wrapper {
   margin-inline: auto;
@@ -21,7 +40,7 @@ Nav
 }
 .navOption {
   text-decoration: none;
-  color: rgb(139, 146, 159);
+  color: var(--greyText);
   font-size: 0.9rem;
   padding: 6px 10px;
   border-radius: 8px;
@@ -30,7 +49,7 @@ Nav
     background-color 0.15s ease;
 }
 .navOption:hover {
-  color: #e1e4e9;
+  color: var(--whiteOutline);
 }
 .nav {
   display: flex;
@@ -41,7 +60,7 @@ Nav
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  height: 34px;
+  height: 10px;
   padding: 14px;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -50,17 +69,17 @@ Nav
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid #e6e8ea;
+  border: 1px solid var(--whiteText);
   transition:
     background-color 0.15s ease,
     border-color 0.15s ease,
     color 0.15s ease;
-  color: #e6e8ea;
+  color: var(--whiteText);
   background: rgb(19, 22, 28);
   border-color: rgb(37, 42, 51);
 }
 .downloadButton:hover {
-  border-color: rgb(139, 146, 159);
+  border-color: var(--greyText);
 }
 .themeButton {
   display: inline-flex;
@@ -75,17 +94,49 @@ Nav
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid #e6e8ea;
+  border: 1px solid var(--whiteText);
   transition:
     background-color 0.15s ease,
     border-color 0.15s ease,
     color 0.15s ease;
-  color: #e6e8ea;
+  color: var(--whiteText);
   background: rgb(19, 22, 28);
   border-color: rgb(37, 42, 51);
 }
 .themeButton:hover {
-  border-color: rgb(139, 146, 159);
+  border-color: var(--greyText);
+}
+/*
+CX
+*/
+.eachSection {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 32px clamp(32px, 5vw, 72px);
+  padding-block: clamp(32px, 5vw, 56px);
+  border-top: 1px solid var(--offGrey);
+}
+.firstSection {
+  padding-block: clamp(40px, 6vw, 72px);
+  border-top: 1px solid var(--offGrey);
+}
+.firstWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+.ulcss {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 18px;
+}
+.licss {
+  display: grid;
+  gap: 2px;
+  max-width: 60ch;
 }
 /*
 C1
@@ -102,7 +153,7 @@ C1
   color: #e6e8ea;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
-  text-decoration-color: rgb(79, 81, 85);
+  text-decoration-color: var(--offGrey);
 }
 .projectLinks:hover {
   text-decoration: underline;
@@ -110,7 +161,7 @@ C1
 }
 
 .infoTextLead {
-  color: rgb(139, 146, 159);
+  color: var(--greyText);
   width: 52px;
   flex: none;
 }
@@ -126,6 +177,105 @@ C1
 .infoTextImportant:hover {
   color: #93a5ff;
 }
-.infoText:hover {
-  color: #93a5ff;
+/*
+C2
+*/
+.introText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--whiteText);
+}
+.projectName {
+  margin: 0;
+  text-wrap: balance;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 10px;
+  color: var(--whiteText);
+}
+.projectDate {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  font-size: 13px;
+  color: var(--greyText);
+}
+.descriptionText {
+  color: var(--greyText);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.standoutText {
+  font-weight: 500;
+  color: var(--whiteText);
+}
+.languagesUsed {
+  font-size: 0.75rem;
+  color: var(--greyText);
+  padding: 2px;
+}
+.categories {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 18px;
+}
+.projectHeaders {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 32px clamp(32px, 5vw, 72px);
+  padding-block: clamp(32px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+}
+/*
+EDU
+*/
+.relevantCours {
+  font-size: 0.8rem;
+  padding: 10px;
+  border: 1px solid var(--offGrey);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--whiteText);
+}
+.barone {
+  white-space: nowrap;
+  padding-top: 2px;
+  text-align: right;
+}
+.bartwo {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.3fr) minmax(0, 1fr)
+    6.5rem;
+  gap: 4px 16px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+/*
+Skills
+*/
+
+.skillPills {
+  font-size: 0.9rem;
+  border: 1px solid var(--offGrey);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--whiteText);
+}
+
+/*
+act
+*/
+.dash {
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 8px;
+  height: 1px;
+  background: var(--whiteText);
 }

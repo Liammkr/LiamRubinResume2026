@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  style="scroll-padding-top: 70px; -webkit-text-size-adjust: 100%"
+>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -7,7 +10,12 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <title>Liam Rubin</title>
+    <link rel="icon" href="assets/LK.jpg" />
     <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/a9dab4553b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <style></style>
   <body>
@@ -15,7 +23,7 @@
       <div class="wrapper">
         <a
           class="navOption"
-          style="font-weight: 600; color: #e6e8ea"
+          style="font-weight: 600; color: var(--whiteText)"
           href="#top"
           >Liam Rubin</a
         >
@@ -27,15 +35,36 @@
             padding-right: 10px;
           "
         >
-          <nav class="nav" aria-label="Sections">
+          <nav class="nav">
             <a class="navOption" href="#projects">Projects</a>
             <a class="navOption" href="#education">Education</a>
             <a class="navOption" href="#skills">Skills</a>
             <a class="navOption" href="#activities">Activities</a>
           </nav>
           <div style="display: flex; align-items: center; gap: 8px">
-            <button id="theme" class="themeButton">Theme</button>
-            <button class="downloadButton">Download PDF</button>
+            <!--<button id="theme" class="themeButton">Theme</button>-->
+            <a
+              id="downloadButton"
+              class="downloadButton"
+              href="assets/Liam_Rubin_Resume.pdf"
+              download="Liam_Rubin_Resume.pdf"
+            >
+              <svg
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+                style="width: 15px; height: 15px; flex: none"
+              >
+                <path
+                  d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              Download PDF
+            </a>
           </div>
         </div>
       </div>
@@ -65,6 +94,7 @@
       })();
     </script>
     <main>
+      <!--intro section and summary part-->
       <section
         style="padding-block: clamp(40px, 7vw, 88px) clamp(40px, 6vw, 72px)"
       >
@@ -85,6 +115,7 @@
                 font-weight: 600;
                 line-height: 1;
                 color: #e6e8ea;
+                font-size: 70px;
               "
             >
               Liam Rubin
@@ -151,6 +182,1227 @@
           </div>
         </div>
       </section>
+      <!--projects section-->
+      <section id="projects" class="firstSection">
+        <div style="max-width: 75%; margin-inline: auto">
+          <div
+            style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-between;
+              gap: 16px;
+              margin-bottom: clamp(8px, 2vw, 16px);
+            "
+          >
+            <h2
+              style="
+                margin: 0;
+                text-wrap: balance;
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--whiteText);
+              "
+            >
+              Projects
+            </h2>
+          </div>
+
+          <!--liamkr.com-->
+          <article
+            id="liamkr"
+            class="eachSection"
+            style="border: 0px transparent"
+          >
+            <div class="firstWrap">
+              <div>
+                <p class="projectDate">
+                  <span>Jul 2024 - Mar 2025</span>
+                </p>
+                <h3 class="projectName">Liamkr.com (Depricated)</h3>
+                <p style="margin: 0; color: var(--greyText); margin-top: 5px">
+                  Web-based sports data analytics and projections app
+                </p>
+              </div>
+              <ul class="ulcss">
+                <li class="licss">
+                  <strong class="introText">Product definition</strong
+                  ><span class="descriptionText"
+                    >Built a website for sport-specific player projections and a
+                    player's chances of achieving a specific stat line,
+                    positioned as a cost-effective alternative to similar and
+                    expensive tools.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Product data</strong
+                  ><span class="descriptionText"
+                    >Defined the data model the projections run on,
+                    <b class="standoutText">40+ data points per player</b>,
+                    gathered automatically by a Python collection pipeline
+                    across NBA, NFL, and MLB rather than entered by hand.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Monetization</strong
+                  ><span class="descriptionText"
+                    >Built the paid path into the product, integrating Stripe
+                    subscriptions into a React front end on a Node.js and
+                    Firebase backend.
+                    <b class="standoutText">142 lifetime total active users</b>
+                    at peak (based on Google Analytics).</span
+                  >
+                </li>
+              </ul>
+              <ul
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+                "
+              >
+                <li class="languagesUsed">Python</li>
+                <li class="languagesUsed">React</li>
+                <li class="languagesUsed">Node.js</li>
+                <li class="languagesUsed">Firebase</li>
+                <li class="languagesUsed">Stripe</li>
+              </ul>
+            </div>
+            <figure
+              style="
+                margin: 0;
+                border-radius: 18px;
+                display: flex;
+                flex-direction: column;
+                min-height: 350px;
+                min-width: 0;
+              "
+            >
+              <div
+                style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  min-height: 0;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    display: grid;
+                    place-items: center;
+                    min-height: 0;
+                  "
+                >
+                  <div
+                    style="
+                      width: 100%;
+                      border-radius: 12px;
+                      overflow: hidden;
+                      background: var(--background);
+                      border: 1px solid var(--offGrey);
+                    "
+                  >
+                    <div
+                      style="
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding-inline: 12px;
+                        background: var(--offGrey);
+                      "
+                    >
+                      <span
+                        style="
+                          flex: 1;
+                          text-align: center;
+                          font-size: 0.75rem;
+                          color: var(--whiteText);
+                        "
+                        >Liamkr.com</span
+                      >
+                    </div>
+                    <div style="position: relative; cursor: zoom-in">
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        src="assets/video/liamkr-web.mp4"
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          width: 100%;
+                          height: auto;
+                        "
+                      ></video>
+                    </div>
+                  </div>
+                </div>
+                <figcaption
+                  style="
+                    margin-top: 0px;
+                    padding-top: 0px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                  "
+                >
+                  <p
+                    style="
+                      padding: 0;
+                      margin: 0;
+                      font-size: 0.875rem;
+                      color: var(--greyText);
+                      line-height: 1.5;
+                      max-width: 52ch;
+                    "
+                  >
+                    Preview of website, showing all projections on the board and
+                    easy export to thrid party apps.
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
+          </article>
+
+          <!-- StatKeeper -->
+          <article class="eachSection" id="statkeeper">
+            <div class="firstWrap">
+              <div>
+                <p class="projectDate">
+                  <span>Feb 2026 - Oct 2026</span>
+                </p>
+                <h3 class="projectName">StatKeeper</h3>
+                <p style="margin: 0; color: var(--greyText); margin-top: 4px">
+                  Live basketball stat tracker
+                </p>
+              </div>
+              <ul class="ulcss">
+                <li class="licss">
+                  <strong class="introText">Users and problem</strong
+                  ><span class="descriptionText"
+                    >Built for high school basketball teams and other amateur
+                    and youth leagues: log shot location during a live game to
+                    generate a shot heat-map and per-player statistics.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Feature scoping</strong
+                  ><span class="descriptionText"
+                    >Built the first version around a single in-game input, shot
+                    location, and made it produce two outputs a team can use
+                    after the game.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Platform</strong
+                  ><span class="descriptionText"
+                    >Built the live statistics tracker as a web app, with an iOS
+                    app. React, Node.js, Firebase, and Swift.</span
+                  >
+                </li>
+              </ul>
+              <ul
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+                "
+              >
+                <li class="languagesUsed">React</li>
+                <li class="languagesUsed">Node.js</li>
+                <li class="languagesUsed">Firebase</li>
+                <li class="languagesUsed">Swift</li>
+              </ul>
+            </div>
+            <figure
+              style="
+                margin: 0;
+                border-radius: 18px;
+                padding: clamp(16px, 3vw, 28px);
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                min-height: 350px;
+                min-width: 0;
+              "
+            >
+              <div
+                style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 18px;
+                  min-height: 0;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    display: grid;
+                    place-items: center;
+                    min-height: 0;
+                  "
+                >
+                  <div
+                    style="
+                      width: clamp(200px, 21vw, 248px);
+                      padding: 8px;
+                      border-radius: 44px;
+                      background: #08090b;
+                    "
+                  >
+                    <div
+                      class="screen"
+                      style="
+                        position: relative;
+                        cursor: zoom-in;
+                        border-radius: 36px;
+                        overflow: hidden;
+                        background: #000;
+                      "
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        poster="assets/img/statkeeper.jpg"
+                        src="assets/video/statkeeper.mp4"
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          width: 100%;
+                          height: auto;
+                        "
+                      ></video>
+                    </div>
+                  </div>
+                </div>
+                <figcaption
+                  style="
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 16px;
+                  "
+                >
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 0.875rem;
+                      color: var(--greyText);
+                      line-height: 1.5;
+                      max-width: 52ch;
+                    "
+                  >
+                    Team setup and support for instant MaxPreps player import.
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Crypto Payment Processor -->
+          <article class="eachSection" id="crypto">
+            <div class="firstWrap">
+              <div>
+                <p class="projectDate">
+                  <span class="projectDate">Jul 2026 - Oct 2026</span>
+                </p>
+                <h3 class="projectName">Crypto Payment Processor</h3>
+                <p style="margin: 0; color: var(--greyText); margin-top: 4px">
+                  Python backend for accepting crypto payments
+                </p>
+              </div>
+              <ul class="ulcss">
+                <li class="licss">
+                  <strong class="introText">Scope</strong
+                  ><span class="descriptionText"
+                    >Python backend that monitors blockchain transactions and
+                    detects when payments complete.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Distribution</strong
+                  ><span class="descriptionText"
+                    >Released free and open source with a front end template for
+                    easy integration.</span
+                  >
+                </li>
+              </ul>
+              <ul
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+                "
+              >
+                <li class="languagesUsed">Python</li>
+                <li class="languagesUsed">Blockchain</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Clear -->
+          <article id="clear" class="eachSection">
+            <div class="firstWrap">
+              <div>
+                <p class="projectDate">
+                  <span>Sep 2026 - Oct 2026</span>
+                </p>
+                <h3 class="projectName">Clear: Skip the feed</h3>
+                <p style="margin: 0; color: var(--greyText); margin-top: 4px">
+                  iOS app
+                </p>
+              </div>
+              <ul class="ulcss">
+                <li class="licss">
+                  <strong class="introText">Product definition</strong
+                  ><span class="descriptionText"
+                    >iOS app which allows you to use your real Instagram account
+                    while blocking all of the addictive features including the
+                    home feed, Reels or Explore, so you can stay connected with
+                    your friends by viewing their stories and messaging them,
+                    without the endless scrolling.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Account safety</strong
+                  ><span class="descriptionText"
+                    >Clear never sees any user details: there are no logs, and
+                    all Instagram data and authentication go straight through
+                    Instagram's own servers.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Build</strong
+                  ><span class="descriptionText"
+                    >Built in native SwiftUI around multiple filtered Instagram
+                    web views with injected CSS and JavaScript. Coming to the
+                    iOS App Store soon.</span
+                  >
+                </li>
+              </ul>
+              <ul
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+                "
+              >
+                <li class="languagesUsed">SwiftUI</li>
+                <li class="languagesUsed">WebKit</li>
+                <li class="languagesUsed">JavaScript</li>
+                <li class="languagesUsed">CSS</li>
+              </ul>
+            </div>
+            <figure
+              style="
+                margin: 0;
+                border-radius: 18px;
+                padding: clamp(16px, 3vw, 28px);
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                min-height: 480px;
+                min-width: 0;
+              "
+            >
+              <div
+                style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 18px;
+                  min-height: 0;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    display: grid;
+                    place-items: center;
+                    min-height: 0;
+                  "
+                >
+                  <div
+                    style="
+                      width: clamp(200px, 21vw, 248px);
+                      padding: 8px;
+                      border-radius: 44px;
+                      background: #08090b;
+                    "
+                  >
+                    <div
+                      style="
+                        position: relative;
+                        cursor: zoom-in;
+                        border-radius: 36px;
+                        overflow: hidden;
+                        background: #000;
+                      "
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        poster="assets/img/clear.jpg"
+                        src="assets/video/clear.mp4"
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          width: 100%;
+                          height: auto;
+                        "
+                      ></video>
+                    </div>
+                  </div>
+                </div>
+                <figcaption
+                  style="
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 16px;
+                  "
+                >
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 0.875rem;
+                      color: var(--greyText);
+                      line-height: 1.5;
+                      max-width: 52ch;
+                    "
+                  >
+                    Stories, notifications, messages, and search. Demo account
+                    used in video.
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Fortnite bot -->
+          <article class="eachSection" id="fortnite">
+            <div class="firstWrap">
+              <div>
+                <p class="projectDate">
+                  <span>Feb 2024 - Jul 2024</span>
+                </p>
+                <h3 class="projectName">Fortnite Ranked Python Bot</h3>
+                <p style="margin: 0; color: var(--greyText); margin-top: 4px">
+                  Autonomous game-playing bot
+                </p>
+              </div>
+              <ul class="ulcss">
+                <li class="licss">
+                  <strong class="introText">Scope</strong
+                  ><span class="descriptionText"
+                    >Fully autonomous Fortnite bot built in Python, reacts to
+                    multiple different game events through detailed image
+                    detection with the goal of gaining rank.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Monitoring</strong
+                  ><span class="descriptionText"
+                    >Live Discord webhook reporting rank progress after every
+                    match.</span
+                  >
+                </li>
+                <li class="licss">
+                  <strong class="introText">Success</strong
+                  ><span class="descriptionText"
+                    >Without any human input the bot achieved
+                    <b style="font-weight: 600; color: var(--whiteText)"
+                      >the fourth highest rank in the game in under 24 hours</b
+                    >
+                    of runtime.</span
+                  >
+                </li>
+              </ul>
+              <ul
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+                "
+              >
+                <li class="languagesUsed">Python</li>
+                <li class="languagesUsed">Image detection</li>
+                <li class="languagesUsed">Discord webhooks</li>
+              </ul>
+            </div>
+            <figure
+              style="
+                margin: 0;
+                border-radius: 18px;
+                padding: clamp(16px, 3vw, 28px);
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                min-height: 480px;
+                min-width: 0;
+              "
+            >
+              <div
+                style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 18px;
+                  min-height: 0;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    display: grid;
+                    place-items: center;
+                    min-height: 0;
+                  "
+                >
+                  <div
+                    style="
+                      border-radius: 12px;
+                      overflow: hidden;
+                      width: min(100%, 290px);
+                    "
+                  >
+                    <div
+                      class="screen"
+                      style="position: relative; cursor: zoom-in"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        poster="assets/img/fortnite-discord.jpg"
+                        src="assets/video/fortnite-discord.mp4"
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          width: 100%;
+                          height: auto;
+                        "
+                      ></video>
+                    </div>
+                  </div>
+                </div>
+                <figcaption
+                  style="
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 16px;
+                  "
+                >
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 0.875rem;
+                      color: var(--greyText);
+                      line-height: 1.5;
+                      max-width: 52ch;
+                    "
+                  >
+                    Discrod Webhook reports of the bots rank.
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <!--EDU-->
+      <section class="firstSection" id="education">
+        <div style="max-width: 75%; margin-inline: auto">
+          <div
+            style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-between;
+              gap: 16px;
+              margin-bottom: clamp(8px, 2vw, 16px);
+            "
+          >
+            <h2
+              style="
+                margin: 0;
+                text-wrap: balance;
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--whiteText);
+              "
+            >
+              Education
+            </h2>
+          </div>
+          <div style="display: grid">
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 500;
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  Santa Monica High School
+                </h3>
+
+                <span
+                  style="
+                    display: block;
+                    margin-top: 6px;
+                    color: var(--greyText);
+                  "
+                  >Expected June 2027 | GPA 3.7</span
+                >
+              </div>
+              <div
+                class="row-body"
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <p style="margin: 0">
+                  <strong style="color: var(--whiteText); font-weight: 600"
+                    >Relevant Coursework</strong
+                  >
+                </p>
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                  "
+                >
+                  <li class="relevantCours">AP Computer Science A</li>
+                  <li class="relevantCours">AP Calculus BC</li>
+                  <li class="relevantCours">AP Physics C</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+                border-top: 1px solid var(--offGrey);
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 500;
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  College dual enrollment
+                </h3>
+                <p
+                  style="
+                    margin: 0;
+                    color: var(--greyText);
+                    font-size: 0.9rem;
+                    margin-top: 5px;
+                  "
+                >
+                  Taken alongside high school
+                </p>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: grid;
+                    gap: 0;
+                    border: 1px solid var(--offGrey);
+                    border-radius: 12px;
+                    overflow: hidden;
+                  "
+                >
+                  <li class="bartwo">
+                    <span>Macroeconomics</span><span>Pasadena City College</span
+                    ><span class="barone">Summer 2026</span>
+                  </li>
+                  <li class="bartwo">
+                    <span>Introduction to Political Science</span
+                    ><span>Palomar College</span
+                    ><span
+                      style="
+                        white-space: nowrap;
+                        padding-top: 2px;
+                        text-align: right;
+                      "
+                      >Summer 2026</span
+                    >
+                  </li>
+                  <li class="bartwo">
+                    <span>German 3</span><span>Palomar College</span
+                    ><span class="barone">Fall 2025</span>
+                  </li>
+                  <li class="bartwo">
+                    <span>German 4</span><span>Palomar College</span
+                    ><span class="barone">Spring 2026</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Skills-->
+      <section class="firstSection" id="skills">
+        <div style="max-width: 75%; margin-inline: auto">
+          <div
+            style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-between;
+              gap: 16px;
+              margin-bottom: clamp(8px, 2vw, 16px);
+            "
+          >
+            <h2
+              style="
+                margin: 0;
+                text-wrap: balance;
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--whiteText);
+              "
+            >
+              Skills
+            </h2>
+          </div>
+          <div style="display: grid">
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+                color: var(--whiteText);
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    line-height: 1.35;
+                  "
+                >
+                  Product-adjacent
+                </h3>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--greyText);
+                  min-width: 0;
+                "
+              >
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                  "
+                >
+                  <li class="skillPills">Data modeling</li>
+                  <li class="skillPills">Subscription billing integration</li>
+                  <li class="skillPills">Web scraping and data collection</li>
+                  <li class="skillPills">In-product data visualization</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+                border-top: 1px solid var(--offGrey);
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  Technical
+                </h3>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                  "
+                >
+                  <li class="skillPills">Python</li>
+                  <li class="skillPills">JavaScript</li>
+                  <li class="skillPills">Java</li>
+                  <li class="skillPills">Swift</li>
+                  <li class="skillPills">React</li>
+                  <li class="skillPills">Node.js</li>
+                  <li class="skillPills">Firebase</li>
+                  <li class="skillPills">Stripe API</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+                border-top: 1px solid var(--offGrey);
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+
+                    font-weight: 600;
+
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  Languages
+                </h3>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <p style="margin: 0">English and German</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="firstSection" id="activities">
+        <div style="max-width: 75%; margin-inline: auto">
+          <div
+            style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-between;
+              gap: 16px;
+              margin-bottom: clamp(8px, 2vw, 16px);
+            "
+          >
+            <h2
+              style="
+                margin: 0;
+                text-wrap: balance;
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--whiteText);
+              "
+            >
+              Activities
+            </h2>
+          </div>
+          <div style="display: grid">
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  Varsity Basketball
+                </h3>
+                <p
+                  style="
+                    margin: 0;
+                    color: var(--greyText);
+                    font-size: 0.9rem;
+                    margin-top: 2px;
+                  "
+                >
+                  Starting Center
+                </p>
+                <span class="projectDate">Aug 2023 - Oct 2026</span>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: grid;
+                    gap: 6px;
+                  "
+                >
+                  <li style="position: relative; padding-left: 18px">
+                    <span class="dash"></span>Youngest player on varsity as a
+                    sophomore.
+                  </li>
+                  <li style="position: relative; padding-left: 18px">
+                    <span class="dash"></span>12 hours of practice per week.
+                  </li>
+                  <li style="position: relative; padding-left: 18px">
+                    <span class="dash"></span>Team reached division playoffs
+                    each year.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+                border-top: 1px solid var(--offGrey);
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  Cali Stars Club Basketball
+                </h3>
+                <span class="projectDate">2022 - 2026</span>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: grid;
+                    gap: 6px;
+                  "
+                >
+                  <li style="position: relative; padding-left: 18px">
+                    <span class="dash"></span>Two-hour practices every day on
+                    the highest division team, coached by a Division I college
+                    trainer.
+                  </li>
+                  <li style="position: relative; padding-left: 18px">
+                    <span class="dash"></span>The same sport and level of play
+                    that Statkeeper is intended for.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+                gap: 8px clamp(24px, 5vw, 72px);
+                padding-block: 22px;
+                border-top: 1px solid var(--offGrey);
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    margin: 0;
+                    text-wrap: balance;
+                    font-weight: 600;
+                    line-height: 1.35;
+                    color: var(--whiteText);
+                  "
+                >
+                  Brentwood Voice / ONC, Intern
+                </h3>
+                <span class="projectDate">August 2026 - October 2026</span>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  gap: 10px;
+                  color: var(--whiteText);
+                  min-width: 0;
+                "
+              >
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: grid;
+                    gap: 6px;
+                  "
+                >
+                  <li style="position: relative; padding-left: 18px">
+                    <span class="dash"></span>Completing various assignment
+                    including video editing, website support, and general tech
+                    support.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="firstSection">
+        <div
+          style="
+            max-width: 75%;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+          "
+        >
+          <p style="margin: 0; color: var(--greyText); font-size: 0.9rem">
+            Liam Rubin | Santa Monica, CA
+          </p>
+          <p style="margin: 0; color: var(--greyText); font-size: 0.9rem">
+            <a
+              href="mailto:liamkrubin@gmail.com"
+              style="
+                color: var(--greyText);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >liamkrubin@gmail.com</a
+            >
+          </p>
+        </div>
+      </footer>
     </main>
+    <script>
+      //keeping topbar prominent
+      (function () {
+        var nav = document.getElementById("navBar");
+        var onScroll = function () {
+          nav.style.borderBottomColor =
+            //set the little border under it to show seperation after scroll.
+            window.scrollY > 8 ? "rgb(79, 81, 85)" : "transparent";
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+    </script>
   </body>
 </html>
