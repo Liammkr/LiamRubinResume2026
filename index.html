@@ -49,7 +49,7 @@
             <a class="navOption" href="#activities">Activities</a>
           </nav>
           <div style="display: flex; align-items: center; gap: 8px">
-            <!--<button id="theme" class="themeButton">Theme</button>-->
+            <button id="theme" class="themeButton">Theme</button>
             <a
               id="downloadButton"
               class="downloadButton"
@@ -81,7 +81,7 @@
         var root = document.documentElement;
 
         // theme: manual choice wins over the OS preference, in both directions
-        /*var saved = null;
+        var saved = null;
         try {
           saved = localStorage.getItem("theme");
         } catch (e) {}
@@ -97,7 +97,7 @@
           try {
             localStorage.setItem("theme", next);
           } catch (e) {}
-        });*/
+        });
       })();
     </script>
     <main>
@@ -121,7 +121,7 @@
                 margin: 0;
                 font-weight: 600;
                 line-height: 1;
-                color: #e6e8ea;
+                color: var(--whiteText);
                 font-size: 70px;
               "
             >
@@ -328,7 +328,7 @@
                           flex: 1;
                           text-align: center;
                           font-size: 0.75rem;
-                          color: var(--whiteText);
+                          color: #e6e8ea;
                         "
                         >Liamkr.com</span
                       >
@@ -611,7 +611,7 @@
                           flex: 1;
                           text-align: center;
                           font-size: 0.75rem;
-                          color: var(--whiteText);
+                          color: #e6e8ea;
                         "
                         >Example Integration</span
                       >

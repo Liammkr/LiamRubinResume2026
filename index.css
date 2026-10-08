@@ -1,5 +1,5 @@
 body {
-  background-color: #0f1113;
+  background-color: var(--background);
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -7,10 +7,29 @@ body {
     scroll-behavior: smooth;
   }
 }
-:root {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --whiteText: #e6e8ea;
+    --background: #0f1113;
+    --greyText: rgb(139, 146, 159);
+    --offGrey: rgb(79, 81, 85);
+
+    --grey1: #0f1218;
+    --grey2: #434b58;
+  }
+}
+:root[data-theme="dark"] {
   --whiteText: #e6e8ea;
-  --whiteOutline: #e1e4e9;
   --background: #0f1113;
+  --greyText: rgb(139, 146, 159);
+  --offGrey: rgb(79, 81, 85);
+
+  --grey1: #0f1218;
+  --grey2: #434b58;
+}
+:root[data-theme="light"] {
+  --whiteText: #0f1113;
+  --background: #e6e8ea;
   --greyText: rgb(139, 146, 159);
   --offGrey: rgb(79, 81, 85);
 
@@ -49,7 +68,7 @@ Nav
     background-color 0.15s ease;
 }
 .navOption:hover {
-  color: var(--whiteOutline);
+  color: var(--whiteText);
 }
 .nav {
   display: flex;
@@ -75,8 +94,8 @@ Nav
     border-color 0.15s ease,
     color 0.15s ease;
   color: var(--whiteText);
-  background: rgb(19, 22, 28);
-  border-color: rgb(37, 42, 51);
+  background: var(--background);
+  border-color: var(--offGrey);
 }
 .downloadButton:hover {
   border-color: var(--greyText);
@@ -85,7 +104,7 @@ Nav
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  height: 34px;
+  height: 35px;
   padding: 14px;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -100,8 +119,8 @@ Nav
     border-color 0.15s ease,
     color 0.15s ease;
   color: var(--whiteText);
-  background: rgb(19, 22, 28);
-  border-color: rgb(37, 42, 51);
+  background: var(--background);
+  border-color: var(--offGrey);
 }
 .themeButton:hover {
   border-color: var(--greyText);
@@ -147,10 +166,10 @@ C1
   align-items: center;
   gap: 8px;
   min-width: 0;
-  color: #e6e8ea;
+  color: var(--whiteText);
 }
 .projectLinks {
-  color: #e6e8ea;
+  color: var(--whiteText);
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
   text-decoration-color: var(--offGrey);
@@ -171,7 +190,7 @@ C1
   gap: 12px;
 }
 .infoTextImportant {
-  color: #e6e8ea;
+  color: var(--whiteText);
   text-decoration: none;
 }
 .infoTextImportant:hover {
