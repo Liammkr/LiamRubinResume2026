@@ -13,9 +13,6 @@ body {
     --background: #0f1113;
     --greyText: rgb(139, 146, 159);
     --offGrey: rgb(79, 81, 85);
-
-    --grey1: #0f1218;
-    --grey2: #434b58;
   }
 }
 :root[data-theme="dark"] {
@@ -23,18 +20,12 @@ body {
   --background: #0f1113;
   --greyText: rgb(139, 146, 159);
   --offGrey: rgb(79, 81, 85);
-
-  --grey1: #0f1218;
-  --grey2: #434b58;
 }
 :root[data-theme="light"] {
   --whiteText: #0f1113;
   --background: #e6e8ea;
   --greyText: rgb(139, 146, 159);
   --offGrey: rgb(79, 81, 85);
-
-  --grey1: #0f1218;
-  --grey2: #434b58;
 }
 /*
 Nav
